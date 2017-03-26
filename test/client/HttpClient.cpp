@@ -35,6 +35,8 @@ int HttpClient::close()
 
 void HttpClient::onData(void* data, size_t len)
 {
+    printf("%s\n", data);
+    printf("-----------------------------------");
     total_bytes_read_ += len;
     //printf("HttpClient_%ld::onData, len=%zu, total=%zu\n", conn_id_, len, total_bytes_read_);
 }
@@ -56,19 +58,19 @@ void HttpClient::onSend(KMError err)
 
 void HttpClient::onClose(KMError err)
 {
-    printf("HttpClient_%ld::onClose, err=%d\n", conn_id_, err);
+    //printf("HttpClient_%ld::onClose, err=%d\n", conn_id_, err);
     http_request_.close();
     loop_->removeObject(conn_id_);
 }
 
 void HttpClient::onHeaderComplete()
 {
-    printf("HttpClient_%ld::onHeaderComplete\n", conn_id_);
+    //printf("HttpClient_%ld::onHeaderComplete\n", conn_id_);
 }
 
 void HttpClient::onRequestComplete()
 {
     static std::atomic_int req_count{0};
-    printf("HttpClient_%ld::onRequestComplete, total=%zu, count=%d\n", conn_id_, total_bytes_read_, ++req_count);
+    //printf("HttpClient_%ld::onRequestComplete, total=%zu, count=%d\n", conn_id_, total_bytes_read_, ++req_count);
     http_request_.close();
 }
