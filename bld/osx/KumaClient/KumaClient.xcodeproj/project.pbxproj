@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8487ED151E87D23F00B10491 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8487ED141E87D23F00B10491 /* main.cpp */; };
-		84C8B74A1E87FBED00081B52 /* kuma.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C8B7491E87FBED00081B52 /* kuma.dylib */; };
-		84C8B7521E87FD0A00081B52 /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8B7501E87FD0A00081B52 /* HttpClient.cpp */; };
+		9A8FBA041E88F09300C149ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FBA031E88F09300C149ED /* main.cpp */; };
+		9A8FBA1A1E88FD5800C149ED /* PTHttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FBA181E88FD5800C149ED /* PTHttpClient.cpp */; };
+		9A8FBA1D1E8906C100C149ED /* kuma.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8FBA1C1E8906C100C149ED /* kuma.dylib */; };
+		9A8FBA201E8A47CA00C149ED /* PTHttpRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FBA1E1E8A47CA00C149ED /* PTHttpRequest.cpp */; };
+		9A8FBA231E8A47E000C149ED /* PTLoopPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FBA211E8A47E000C149ED /* PTLoopPool.cpp */; };
+		9A8FBA261E8A47F000C149ED /* PTLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FBA241E8A47F000C149ED /* PTLoop.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8487ED0F1E87D23F00B10491 /* CopyFiles */ = {
+		9A8FB9FE1E88F09300C149ED /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,58 +28,84 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8487ED111E87D23F00B10491 /* KumaClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KumaClient; sourceTree = BUILT_PRODUCTS_DIR; };
-		8487ED141E87D23F00B10491 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		84C8B7491E87FBED00081B52 /* kuma.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = kuma.dylib; path = "../../../../../Library/Developer/Xcode/DerivedData/kuma-fwvzgcpfnymofcamqchxtqmwrmcj/Build/Products/Debug/kuma.dylib"; sourceTree = "<group>"; };
-		84C8B74F1E87FCC900081B52 /* kuma */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kuma; sourceTree = "<group>"; };
-		84C8B7501E87FD0A00081B52 /* HttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpClient.cpp; sourceTree = "<group>"; };
-		84C8B7511E87FD0A00081B52 /* HttpClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HttpClient.hpp; sourceTree = "<group>"; };
+		9A8FBA001E88F09300C149ED /* KumaClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KumaClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8FBA031E88F09300C149ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9A8FBA101E88FB4300C149ED /* evdefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evdefs.h; sourceTree = "<group>"; };
+		9A8FBA111E88FB4300C149ED /* kmapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kmapi.h; sourceTree = "<group>"; };
+		9A8FBA121E88FB4300C149ED /* kmconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kmconf.h; sourceTree = "<group>"; };
+		9A8FBA131E88FB4300C149ED /* kmdefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kmdefs.h; sourceTree = "<group>"; };
+		9A8FBA181E88FD5800C149ED /* PTHttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTHttpClient.cpp; sourceTree = "<group>"; };
+		9A8FBA191E88FD5800C149ED /* PTHttpClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PTHttpClient.hpp; sourceTree = "<group>"; };
+		9A8FBA1C1E8906C100C149ED /* kuma.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = kuma.dylib; path = "../../../../../../Library/Developer/Xcode/DerivedData/Kuma-bznsgwcbczfqfxgwzjvchltnitgl/Build/Products/Debug/kuma.dylib"; sourceTree = "<group>"; };
+		9A8FBA1E1E8A47CA00C149ED /* PTHttpRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTHttpRequest.cpp; sourceTree = "<group>"; };
+		9A8FBA1F1E8A47CA00C149ED /* PTHttpRequest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PTHttpRequest.hpp; sourceTree = "<group>"; };
+		9A8FBA211E8A47E000C149ED /* PTLoopPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTLoopPool.cpp; sourceTree = "<group>"; };
+		9A8FBA221E8A47E000C149ED /* PTLoopPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PTLoopPool.hpp; sourceTree = "<group>"; };
+		9A8FBA241E8A47F000C149ED /* PTLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTLoop.cpp; sourceTree = "<group>"; };
+		9A8FBA251E8A47F000C149ED /* PTLoop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PTLoop.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8487ED0E1E87D23F00B10491 /* Frameworks */ = {
+		9A8FB9FD1E88F09300C149ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C8B74A1E87FBED00081B52 /* kuma.dylib in Frameworks */,
+				9A8FBA1D1E8906C100C149ED /* kuma.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8487ED081E87D23F00B10491 = {
+		9A8FB9F71E88F09300C149ED = {
 			isa = PBXGroup;
 			children = (
-				8487ED131E87D23F00B10491 /* KumaClient */,
-				8487ED121E87D23F00B10491 /* Products */,
-				84C8B7481E87FBED00081B52 /* Frameworks */,
+				9A8FBA0F1E88FB4300C149ED /* kuma */,
+				9A8FBA021E88F09300C149ED /* KumaClient */,
+				9A8FBA011E88F09300C149ED /* Products */,
+				9A8FBA1B1E8906C100C149ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		8487ED121E87D23F00B10491 /* Products */ = {
+		9A8FBA011E88F09300C149ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8487ED111E87D23F00B10491 /* KumaClient */,
+				9A8FBA001E88F09300C149ED /* KumaClient */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8487ED131E87D23F00B10491 /* KumaClient */ = {
+		9A8FBA021E88F09300C149ED /* KumaClient */ = {
 			isa = PBXGroup;
 			children = (
-				84C8B74F1E87FCC900081B52 /* kuma */,
-				8487ED141E87D23F00B10491 /* main.cpp */,
-				84C8B7501E87FD0A00081B52 /* HttpClient.cpp */,
-				84C8B7511E87FD0A00081B52 /* HttpClient.hpp */,
+				9A8FBA031E88F09300C149ED /* main.cpp */,
+				9A8FBA181E88FD5800C149ED /* PTHttpClient.cpp */,
+				9A8FBA191E88FD5800C149ED /* PTHttpClient.hpp */,
+				9A8FBA1E1E8A47CA00C149ED /* PTHttpRequest.cpp */,
+				9A8FBA1F1E8A47CA00C149ED /* PTHttpRequest.hpp */,
+				9A8FBA211E8A47E000C149ED /* PTLoopPool.cpp */,
+				9A8FBA221E8A47E000C149ED /* PTLoopPool.hpp */,
+				9A8FBA241E8A47F000C149ED /* PTLoop.cpp */,
+				9A8FBA251E8A47F000C149ED /* PTLoop.hpp */,
 			);
 			path = KumaClient;
 			sourceTree = "<group>";
 		};
-		84C8B7481E87FBED00081B52 /* Frameworks */ = {
+		9A8FBA0F1E88FB4300C149ED /* kuma */ = {
 			isa = PBXGroup;
 			children = (
-				84C8B7491E87FBED00081B52 /* kuma.dylib */,
+				9A8FBA101E88FB4300C149ED /* evdefs.h */,
+				9A8FBA111E88FB4300C149ED /* kmapi.h */,
+				9A8FBA121E88FB4300C149ED /* kmconf.h */,
+				9A8FBA131E88FB4300C149ED /* kmdefs.h */,
+			);
+			path = kuma;
+			sourceTree = "<group>";
+		};
+		9A8FBA1B1E8906C100C149ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A8FBA1C1E8906C100C149ED /* kuma.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,13 +113,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8487ED101E87D23F00B10491 /* KumaClient */ = {
+		9A8FB9FF1E88F09300C149ED /* KumaClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8487ED181E87D23F00B10491 /* Build configuration list for PBXNativeTarget "KumaClient" */;
+			buildConfigurationList = 9A8FBA071E88F09300C149ED /* Build configuration list for PBXNativeTarget "KumaClient" */;
 			buildPhases = (
-				8487ED0D1E87D23F00B10491 /* Sources */,
-				8487ED0E1E87D23F00B10491 /* Frameworks */,
-				8487ED0F1E87D23F00B10491 /* CopyFiles */,
+				9A8FB9FC1E88F09300C149ED /* Sources */,
+				9A8FB9FD1E88F09300C149ED /* Frameworks */,
+				9A8FB9FE1E88F09300C149ED /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -98,55 +127,59 @@
 			);
 			name = KumaClient;
 			productName = KumaClient;
-			productReference = 8487ED111E87D23F00B10491 /* KumaClient */;
+			productReference = 9A8FBA001E88F09300C149ED /* KumaClient */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8487ED091E87D23F00B10491 /* Project object */ = {
+		9A8FB9F81E88F09300C149ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = chris;
+				ORGANIZATIONNAME = putao;
 				TargetAttributes = {
-					8487ED101E87D23F00B10491 = {
+					9A8FB9FF1E88F09300C149ED = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = W395RC57B2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 8487ED0C1E87D23F00B10491 /* Build configuration list for PBXProject "KumaClient" */;
+			buildConfigurationList = 9A8FB9FB1E88F09300C149ED /* Build configuration list for PBXProject "KumaClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 8487ED081E87D23F00B10491;
-			productRefGroup = 8487ED121E87D23F00B10491 /* Products */;
+			mainGroup = 9A8FB9F71E88F09300C149ED;
+			productRefGroup = 9A8FBA011E88F09300C149ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8487ED101E87D23F00B10491 /* KumaClient */,
+				9A8FB9FF1E88F09300C149ED /* KumaClient */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8487ED0D1E87D23F00B10491 /* Sources */ = {
+		9A8FB9FC1E88F09300C149ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C8B7521E87FD0A00081B52 /* HttpClient.cpp in Sources */,
-				8487ED151E87D23F00B10491 /* main.cpp in Sources */,
+				9A8FBA201E8A47CA00C149ED /* PTHttpRequest.cpp in Sources */,
+				9A8FBA1A1E88FD5800C149ED /* PTHttpClient.cpp in Sources */,
+				9A8FBA041E88F09300C149ED /* main.cpp in Sources */,
+				9A8FBA261E8A47F000C149ED /* PTLoop.cpp in Sources */,
+				9A8FBA231E8A47E000C149ED /* PTLoopPool.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8487ED161E87D23F00B10491 /* Debug */ = {
+		9A8FBA051E88F09300C149ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -193,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		8487ED171E87D23F00B10491 /* Release */ = {
+		9A8FBA061E88F09300C149ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,16 +266,18 @@
 			};
 			name = Release;
 		};
-		8487ED191E87D23F00B10491 /* Debug */ = {
+		9A8FBA081E88F09300C149ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = W395RC57B2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8487ED1A1E87D23F00B10491 /* Release */ = {
+		9A8FBA091E88F09300C149ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = W395RC57B2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -250,25 +285,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8487ED0C1E87D23F00B10491 /* Build configuration list for PBXProject "KumaClient" */ = {
+		9A8FB9FB1E88F09300C149ED /* Build configuration list for PBXProject "KumaClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8487ED161E87D23F00B10491 /* Debug */,
-				8487ED171E87D23F00B10491 /* Release */,
+				9A8FBA051E88F09300C149ED /* Debug */,
+				9A8FBA061E88F09300C149ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8487ED181E87D23F00B10491 /* Build configuration list for PBXNativeTarget "KumaClient" */ = {
+		9A8FBA071E88F09300C149ED /* Build configuration list for PBXNativeTarget "KumaClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8487ED191E87D23F00B10491 /* Debug */,
-				8487ED1A1E87D23F00B10491 /* Release */,
+				9A8FBA081E88F09300C149ED /* Debug */,
+				9A8FBA091E88F09300C149ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8487ED091E87D23F00B10491 /* Project object */;
+	rootObject = 9A8FB9F81E88F09300C149ED /* Project object */;
 }

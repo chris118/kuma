@@ -35,8 +35,7 @@ int HttpClient::close()
 
 void HttpClient::onData(void* data, size_t len)
 {
-    printf("%s\n", data);
-    printf("-----------------------------------");
+    printf("%s", data);
     total_bytes_read_ += len;
     //printf("HttpClient_%ld::onData, len=%zu, total=%zu\n", conn_id_, len, total_bytes_read_);
 }

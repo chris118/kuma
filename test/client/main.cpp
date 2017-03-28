@@ -18,7 +18,7 @@
 
 using namespace kuma;
 
-#define THREAD_COUNT    10
+#define THREAD_COUNT    1
 static bool g_exit = false;
 bool g_test_http2 = false;
 EventLoop main_loop(PollType::NONE);
